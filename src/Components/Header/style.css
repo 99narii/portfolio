@@ -31,20 +31,13 @@
   border-radius: 2rem;
 }
 .header nav > ul > li:hover {
-  color: #fff;
-  background-color: #A587A9;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-.header nav > ul > li:active {
-  background-color: #694F75;
+  color: #A587A9;
 }
 .header nav > ul > li.contact {
   background-color: #A587A9;
   color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 .header nav > ul > li.contact:hover {
   background-color: #694F75;
-}
-.header nav > ul > li.contact:active {
-  background-color: #5B5067;
 }/*# sourceMappingURL=style.css.map */

@@ -17,22 +17,24 @@
                 padding: 0.3rem 1rem;
                 border-radius: 2rem;
                 &:hover {
-                    color: $WHITE;
-                    background-color: $POINT_300;
-                    transition: color 0.3s ease, transform 0.3s ease;  
+                    color: $POINT_300;
+                    // background-color: $POINT_300;
+                    // transition: color 0.3s ease, transform 0.3s ease;  
                 }
-                &:active {
-                    background-color: $POINT_700;
-                }
+                // &:active {
+                //     background-color: $POINT_700;
+                // }
                 &.contact {
                     background-color: $POINT_300;
                     color: $WHITE;
+                    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease; 
+
                     &:hover {
                         background-color: $POINT_700;
                     }
-                    &:active {
-                        background-color: $POINT_900;
-                    }
+                    // &:active {
+                    //     background-color: $POINT_900;
+                    // }
                 }
             }
         }
