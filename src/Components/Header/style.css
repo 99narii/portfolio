@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "MaruBuri";
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Paperlogy-8ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header nav > ul {
+  display: flex;
+  gap: 3.5rem;
+}
+.header nav > ul > li {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 0.3rem 1rem;
+  border-radius: 2rem;
+}
+.header nav > ul > li:hover {
+  color: #fff;
+  background-color: #A587A9;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.header nav > ul > li:active {
+  background-color: #694F75;
+}
+.header nav > ul > li.contact {
+  background-color: #A587A9;
+  color: #fff;
+}
+.header nav > ul > li.contact:hover {
+  background-color: #694F75;
+}
+.header nav > ul > li.contact:active {
+  background-color: #5B5067;
+}/*# sourceMappingURL=style.css.map */

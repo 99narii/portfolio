@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "MaruBuri";
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Paperlogy-8ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+.main_cont {
+  border: 0.3rem solid #A587A9;
+  padding: 3rem;
+  border-radius: 3rem;
+  position: relative;
+  color: #2e2e2e;
+  height: 39rem;
+}
+.main_cont .contents {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.main_cont .main_element {
+  position: relative;
+}
+.main_cont .main_element .typo {
+  position: absolute;
+  left: 1rem;
+  top: 3.5rem;
+  z-index: 1;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+.main_cont .main_element .typo > p {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  text-align: left;
+  white-space: nowrap;
+}
+.main_cont .main_element .circle {
+  margin-top: 7rem;
+  position: relative;
+  left: 6rem;
+  background-color: #A587A9;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  animation: circleAppear 1s forwards;
+  animation-delay: 1s;
+}
+.main_cont .main_element_typo {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 5rem;
+  align-items: flex-end;
+}
+.main_cont .main_element_typo > .typo {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+.main_cont > .sns_main {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: -2rem;
+  margin: 0 auto;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End in normal position */
+  }
+}
+@keyframes circleAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0); /* Start scaled down */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* End with normal size */
+  }
+}/*# sourceMappingURL=style.css.map */

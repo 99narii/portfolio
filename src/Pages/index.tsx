@@ -1,8 +1,12 @@
+import { Footer } from "../Components/Footer";
+import { MainContainer } from "../Components/MainContainer/MainContainer";
+import './style.scss';
 
 export const Main=() => {
     return(
-    <div>
-    메인페이지
+    <div className="main">
+        <MainContainer/>
+        <Footer/>
     </div>
     );
 }

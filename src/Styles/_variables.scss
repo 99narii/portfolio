@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'MaruBuri';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf) format("truetype");
+  }
+
+@font-face {
+  font-family: 'Paperlogy-8ExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+$POINT_50: #EEE7EF;
+$POINT_100: #D7C4DA;
+$POINT_200: #BD9FC2;
+$POINT_300: #A587A9;
+$POINT_400: #98709D;
+$POINT_500: #906E95;
+$POINT_600: #694F75;
+$POINT_700: #694F75;
+$POINT_800: #614E6C;
+$POINT_900: #5B5067;
+
+$NEUTRAL_50: #FAFAFA;
+$NEUTRAL_100: #F5F5F5;
+$NEUTRAL_200: #EEEEEE;
+$NEUTRAL_300: #E0E0E0;
+$NEUTRAL_400: #BDBDBD;
+$NEUTRAL_500: #9E9E9E;
+$NEUTRAL_600: #757575;
+$NEUTRAL_700: #616161;
+$NEUTRAL_800: #424242;
+$NEUTRAL_900: #2e2e2e;
+$WHITE: #fff;
