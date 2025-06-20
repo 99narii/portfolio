@@ -6,7 +6,6 @@ export const Main=() => {
     return(
     <div className="main">
         <MainContainer/>
-        <Footer/>
     </div>
     );
 }

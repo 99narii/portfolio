@@ -1,0 +1,372 @@
+@import '../../Styles/variables.scss';
+
+//연락하기
+.contact-page {
+    min-height: 100vh;
+    padding: 2rem;
+    margin-top: 3rem;
+    background: $WHITE;
+  }
+  
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    
+    h1 {
+      font-size: 2.4rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      color: $NEUTRAL_900;
+      margin-bottom: 1rem;
+      
+      &::after {
+        content: '';
+        display: block;
+        width: 6rem;
+        height: 0.4rem;
+        background-color: $POINT_300;
+        margin: 1rem auto;
+        border-radius: 0.2rem;
+      }
+    }
+    
+    p {
+      font-size: 1.2rem;
+      color: $NEUTRAL_600;
+      font-family: "Montserrat", sans-serif;
+    }
+  }
+  
+  .quote-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+  
+  .quote-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .category-section {
+    background: $WHITE;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.08);
+    
+    .category-title {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        h3 {
+            font-size: 1.4rem;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            color: $NEUTRAL_800;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+          }
+          p {
+            font-size: 1rem;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            color: $NEUTRAL_600;
+          }
+    }
+    
+    
+  }
+  
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .quote-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 0.1rem solid $POINT_200;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: $NEUTRAL_50;
+    
+    &:selected {
+      border-color: $POINT_300;
+      background: $POINT_50;
+    }
+    
+    input[type="checkbox"] {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1.5rem;
+        accent-color: $POINT_300;
+        cursor: pointer;
+        border-radius: 50%; /* 동그랗게 만들기 */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 0.15rem solid $POINT_200;
+        background-color: white;
+        position: relative;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          border-color: $POINT_300;
+        }
+        
+        &:checked {
+          background-color: $POINT_300;
+          border-color: $POINT_300;
+          
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+          }
+        }
+        
+        &:focus {
+          outline: 0.2rem solid rgba($POINT_300, 0.3);
+          outline-offset: 0.1rem;
+        }
+      }
+      
+      input[type="checkbox"]:checked + .item-content {
+        color: $POINT_300;
+      }
+    }
+
+  
+  .item-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    .item-name {
+      font-size: 1rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      color: $NEUTRAL_800;
+    }
+    
+    .item-price {
+      font-size: 1.2rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      color: $POINT_500;
+    }
+  }
+  
+  .quote-summary {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+  }
+  
+  .summary-card {
+    background: $WHITE;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    border: 0.1rem solid $POINT_300;
+    
+    h3 {
+      font-size: 1.5rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      color: $NEUTRAL_800;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  }
+  
+  .selected-items {
+    margin-bottom: 2rem;
+    
+    .no-items {
+      text-align: center;
+      color: $NEUTRAL_500;
+      padding: 2rem 0;
+    }
+  }
+  
+  .selected-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 0.1rem solid $POINT_100;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+    
+    span:first-child {
+      font-family: "Montserrat", sans-serif;
+      color: $NEUTRAL_700;
+    }
+    
+    span:last-child {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      color: $POINT_600;
+    }
+  }
+  
+  .total-price {
+    background: $POINT_50;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    
+    strong {
+      font-size: 1rem;
+      font-family: "Montserrat", sans-serif;
+      color: $NEUTRAL_600;
+    }
+    .price-note {
+        font-size: 1.3rem;
+        color: $POINT_800;
+        font-weight: 600;
+        margin-top: 0.5rem;
+      }
+  }
+  
+  .price-note {
+    text-align: center;
+    font-size: 1rem;
+    color: $NEUTRAL_500;
+  }
+  
+  .contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem 3rem;
+    border: none;
+    border-radius: 5rem;
+    font-size: 1.4rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 15rem;
+    .btn-icon {
+      font-size: 2rem;
+    }
+    
+    &:hover {
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    }
+    
+    &.message-btn {
+      background-color: $POINT_300;
+      color: $WHITE;
+      
+      &:hover {
+        background-color: $POINT_300;
+      }
+    }
+    
+    &.call-btn {
+      background-color: $POINT_500;
+      color: $WHITE;
+      
+      &:hover {
+        background-color: $POINT_500;
+      }
+    }
+  }
+  
+  // 1024px 이하 반응형
+  @media (max-width: 1024px) {
+    .contact-page {
+      padding: 0;
+    }
+    
+    .page-header {
+      margin-bottom: 3rem;
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      p {
+        font-size: 1rem;
+      }
+    }
+    
+    .quote-section {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .quote-summary {
+      position: static;
+      order: 2;
+    }
+    
+    .quote-categories {
+      order: 1;
+    }
+    
+    .category-section {
+        box-shadow: none;
+      padding: 2rem;
+      .category-title {
+        flex-direction: column;
+        align-items: flex-start;
+        h3 {
+            font-size: 1.2rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+      }
+      
+      
+    }
+    
+    .items-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-buttons {
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      
+      .contact-btn {
+        width: 50%;
+        font-size: 1.2rem;
+        height: 3.3rem;
+        justify-content: center;
+        padding: 1rem;
+      }
+    }
+  }
+  

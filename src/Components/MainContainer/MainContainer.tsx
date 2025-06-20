@@ -7,7 +7,6 @@ import './style.scss';
 export const MainContainer=() => {
     return(
     <div className="main_cont">
-        <Header />
         <div className="contents">
             <div className="main_element">
                 <span className="typo">

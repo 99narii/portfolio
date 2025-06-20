@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+
+.app {
+    border: 0.3rem solid $POINT_300;
+    padding: 2rem;
+    border-radius: 3rem;
+    position: relative;
+    color: $NEUTRAL_900;
+    margin: 2rem auto;
+    max-width: 1400px;
+    width: 95%;
+}
+
+@media (max-width: 1024px) {
+    .app {
+        border-radius: 1.2rem;
+        overflow-x: hidden;
+        width: 95vw;
+    }
+}

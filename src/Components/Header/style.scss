@@ -4,7 +4,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    nav {
+    position: relative;
+    
+    .desktop-nav {
         >ul {
             display: flex;
             gap: 3.5rem;
@@ -18,12 +20,7 @@
                 border-radius: 2rem;
                 &:hover {
                     color: $POINT_300;
-                    // background-color: $POINT_300;
-                    // transition: color 0.3s ease, transform 0.3s ease;  
                 }
-                // &:active {
-                //     background-color: $POINT_700;
-                // }
                 &.contact {
                     background-color: $POINT_300;
                     color: $WHITE;
@@ -32,12 +29,123 @@
                     &:hover {
                         background-color: $POINT_700;
                     }
-                    // &:active {
-                    //     background-color: $POINT_900;
-                    // }
                 }
             }
         }
     }
 
+    // 햄버거 메뉴 버튼
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 2rem;
+        height: 2rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+
+        span {
+            width: 2rem;
+            height: 0.3rem;
+            background: $POINT_800;
+            border-radius: 0.15rem;
+            transition: all 0.3s ease;
+            transform-origin: 1px;
+        }
+
+        &.active {
+            span:first-child {
+                transform: rotate(45deg);
+                background-color: $POINT_100;
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            span:nth-child(3) {
+                transform: rotate(-45deg);
+                background-color: $POINT_100;
+            }
+        }
+    }
+
+    // 모바일 슬라이딩 메뉴
+    .mobile-nav {
+        position: fixed;
+        top: 8rem;
+        width: 15rem;
+        right: -15rem;
+        border-radius: 1rem 0 0 1rem;
+        height: 17.5rem;
+        background-color: $WHITE;
+        box-shadow: -0.5rem 0 1rem rgba(0, 0, 0, 0.308);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        padding-top: 3.6rem;
+
+        &.open {
+            right: 0;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 0 3rem;
+
+            li {
+                font-size: 1.3rem;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 600;
+                cursor: pointer;
+                transition: color 0.3s ease;
+                border-radius: 2rem;
+                text-align: center;
+
+                &:hover {
+                    color: $POINT_300;
+                }
+
+                &.contact {
+                    background-color: $POINT_300;
+                    color: $WHITE;
+                    transition: color 0.3s ease, background-color 0.3s ease;
+                    height: 2.6rem;
+                    padding: 0.5rem;
+
+                    &:hover {
+                        background-color: $POINT_700;
+                    }
+                }
+            }
+        }
+    }
+
+    // 오버레이
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        .logo {
+            width: 8rem;
+        }
+        .desktop-nav {
+            display: none;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+    }
 }

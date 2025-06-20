@@ -5,6 +5,7 @@ import { faBlog } from "@fortawesome/free-solid-svg-icons";
 
 interface SnsProps {
   className: string;
+  
 }
 
 export const Sns: React.FC<SnsProps> = ({ className }) => {
