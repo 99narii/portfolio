@@ -8,8 +8,10 @@ import Contact from './Pages/contact';
 import { Footer } from './Components/Footer';
 
 function App() {
+  const basename = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
+  
   return (
-    <Router>
+    <Router basename={basename}>
       <div className="app">
         <Header />
         <Routes>
